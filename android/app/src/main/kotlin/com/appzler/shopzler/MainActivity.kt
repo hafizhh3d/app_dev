@@ -1,4 +1,4 @@
-package com.appzler.shopzler
+package live.ppiutmconnect.digati
 
 import io.flutter.embedding.android.FlutterActivity
 
