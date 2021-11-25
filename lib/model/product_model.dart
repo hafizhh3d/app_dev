@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:/helper/hexColor_extension.dart';
+import 'package:Digati/helper/hexColor_extension.dart';
 
 class ProductModel {
   late String name, image, description, size, price, productId, category;
