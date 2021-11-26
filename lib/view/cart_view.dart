@@ -64,7 +64,7 @@ class CartView extends StatelessWidget {
                                     ),
                                     CustomText(
                                       text:
-                                          '\$${controller.cartProducts[index].price}',
+                                          '\RM${controller.cartProducts[index].price}',
                                       fontSize: 16,
                                       color: primaryColor,
                                     ),
@@ -149,7 +149,7 @@ class CartView extends StatelessWidget {
                                 color: Colors.grey,
                               ),
                               CustomText(
-                                text: '\$${controller.totalPrice.toString()}',
+                                text: '\RM${controller.totalPrice.toString()}',
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: primaryColor,

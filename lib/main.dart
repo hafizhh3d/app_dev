@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
     return OrientationBuilder(
       builder: (context, orientation) => ScreenUtilInit(
         designSize: orientation == Orientation.portrait
-            ? Size(375, 812)
-            : Size(812, 375),
+            ? Size(414, 736)
+            : Size(736, 414),
         builder: () => GetMaterialApp(
           initialBinding: Binding(),
           theme: ThemeData(
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           ),
           home: ControlView(),
           debugShowCheckedModeBanner: false,
-          title: 'Shopzler',
+          title: 'Digati',
         ),
       ),
     );
