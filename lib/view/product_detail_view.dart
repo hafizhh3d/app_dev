@@ -123,7 +123,7 @@ class ProductDetailView extends StatelessWidget {
                         color: Colors.grey,
                       ),
                       CustomText(
-                        text: '\$${_productModel.price}',
+                        text: '\RM${_productModel.price}',
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: primaryColor,
