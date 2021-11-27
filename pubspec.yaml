@@ -1,5 +1,5 @@
 name: digati
-description: A new Flutter project.
+description: E-Commerce for PPI UTM Digati Branch.
 
 version: 1.0.0+1
 
@@ -32,14 +32,15 @@ dev_dependencies:
   flutter_launcher_icons: ^0.9.2
 
 flutter_native_splash:
-  color: "#accceb"
+  color: "#ed4051"
   image: assets/splashDigati.png
   android12: true
 
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/iconDigati.png"
+  image_path_android: "assets/iconDigati.png"
+  image_path_ios: "assets/iconDigati.png"
 
 flutter:
   uses-material-design: true
