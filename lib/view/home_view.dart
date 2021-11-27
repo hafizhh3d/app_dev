@@ -101,6 +101,11 @@ class ListViewCategories extends StatelessWidget {
     return GetBuilder<HomeViewModel>(
       builder: (controller) => Container(
         height: 90.h,
+        child: Text(
+          'This is Categories!',
+          textAlign: TextAlign.center,
+        ),
+        /*
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: controller.categories.length,
@@ -150,7 +155,7 @@ class ListViewCategories extends StatelessWidget {
               width: 20.w,
             );
           },
-        ),
+        ),*/
       ),
     );
   }
@@ -162,6 +167,11 @@ class ListViewProducts extends StatelessWidget {
     return GetBuilder<HomeViewModel>(
       builder: (controller) => Container(
         height: 320.h,
+        child: Text(
+          'This is Best Selling!',
+          textAlign: TextAlign.center,
+        ),
+        /*
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: controller.products.length,
@@ -215,7 +225,7 @@ class ListViewProducts extends StatelessWidget {
               width: 15.w,
             );
           },
-        ),
+        ),*/
       ),
     );
   }
