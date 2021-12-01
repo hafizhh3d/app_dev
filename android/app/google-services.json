@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "771929374392",
+    "project_id": "go-getters-9187c",
+    "storage_bucket": "go-getters-9187c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:771929374392:android:2b8418cb76cd0c517bbe4d",
+        "android_client_info": {
+          "package_name": "live.ppiutmconnect.digati"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "771929374392-qk632r9vc92rmc45qjsujctk65919hrv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-FnzMiOcpohg6vkiprVguSOJfqOj3zI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "771929374392-qk632r9vc92rmc45qjsujctk65919hrv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
