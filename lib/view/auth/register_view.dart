@@ -61,7 +61,7 @@ class RegisterView extends GetWidget<AuthViewModel> {
                         ),
                         CustomTextFormField(
                           title: 'Name',
-                          hintText: 'Ahmed Elsayed',
+                          hintText: 'Full Name',
                           validatorFn: (value) {
                             if (value!.isEmpty || value.length < 4)
                               return 'Please enter valid name.';
@@ -75,7 +75,7 @@ class RegisterView extends GetWidget<AuthViewModel> {
                         ),
                         CustomTextFormField(
                           title: 'Email',
-                          hintText: 'ahmedelsayed@gmail.com',
+                          hintText: 'mail@mail.com',
                           keyboardType: TextInputType.emailAddress,
                           validatorFn: (value) {
                             if (value!.isEmpty)
