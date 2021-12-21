@@ -201,7 +201,7 @@ class ListViewProducts extends StatelessWidget {
                       maxLines: 1,
                     ),
                     CustomText(
-                      text: '\$${controller.products[index].price}',
+                      text: '\RM${controller.products[index].price}',
                       fontSize: 16,
                       color: primaryColor,
                     ),

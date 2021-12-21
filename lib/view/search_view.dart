@@ -147,7 +147,7 @@ class _SearchViewState extends State<SearchView> {
                               maxLines: 1,
                             ),
                             CustomText(
-                              text: '\$${_searchProducts[index].price}',
+                              text: '\RM${_searchProducts[index].price}',
                               fontSize: 16,
                               color: primaryColor,
                             ),
