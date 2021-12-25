@@ -64,7 +64,7 @@ class CheckoutView extends StatelessWidget {
                         ),
                         CustomTextFormField(
                           title: 'Street',
-                          hintText: '21, Tahrir Street',
+                          hintText: '11, Pontian Lama Street',
                           validatorFn: (value) {
                             if (value!.isEmpty || value.length < 4)
                               return 'Please enter valid street name.';
@@ -78,7 +78,7 @@ class CheckoutView extends StatelessWidget {
                         ),
                         CustomTextFormField(
                           title: 'City',
-                          hintText: 'Downtown Cairo',
+                          hintText: 'Skudai',
                           validatorFn: (value) {
                             if (value!.isEmpty || value.length < 4)
                               return 'Please enter valid city name.';
@@ -95,7 +95,7 @@ class CheckoutView extends StatelessWidget {
                             Expanded(
                               child: CustomTextFormField(
                                 title: 'State',
-                                hintText: 'Cairo',
+                                hintText: 'Johor',
                                 validatorFn: (value) {
                                   if (value!.isEmpty || value.length < 4)
                                     return 'Please enter valid state name.';
@@ -111,10 +111,10 @@ class CheckoutView extends StatelessWidget {
                             Expanded(
                               child: CustomTextFormField(
                                 title: 'Country',
-                                hintText: 'Egypt',
+                                hintText: 'Malaysia',
                                 validatorFn: (value) {
                                   if (value!.isEmpty || value.length < 4)
-                                    return 'Please enter valid city name.';
+                                    return 'Please enter valid country name.';
                                 },
                                 onSavedFn: (value) {
                                   controller.country = value;
@@ -128,7 +128,7 @@ class CheckoutView extends StatelessWidget {
                         ),
                         CustomTextFormField(
                           title: 'Phone Number',
-                          hintText: '+20123456789',
+                          hintText: '+60',
                           keyboardType: TextInputType.phone,
                           validatorFn: (value) {
                             if (value!.isEmpty || value.length < 10)
@@ -233,7 +233,7 @@ class ListViewProducts extends StatelessWidget {
                       ),
                       CustomText(
                         text:
-                            '\$${controller.cartProducts[index].price} x ${controller.cartProducts[index].quantity}',
+                            '\RM${controller.cartProducts[index].price} x ${controller.cartProducts[index].quantity}',
                         fontSize: 14,
                         color: primaryColor,
                       ),
@@ -261,7 +261,7 @@ class ListViewProducts extends StatelessWidget {
                 color: Colors.grey,
               ),
               CustomText(
-                text: '\$${controller.totalPrice.toString()}',
+                text: '\RM${controller.totalPrice.toString()}',
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: primaryColor,

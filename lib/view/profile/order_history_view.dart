@@ -104,7 +104,7 @@ class OrderHistoryView extends StatelessWidget {
                                   ),
                                   CustomText(
                                     text:
-                                        '\$${controller.checkouts[index].totalPrice}',
+                                        '\RM${controller.checkouts[index].totalPrice}',
                                     color: primaryColor,
                                   ),
                                 ],

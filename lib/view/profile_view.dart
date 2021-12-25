@@ -6,7 +6,6 @@ import '../../core/viewmodel/auth_viewmodel.dart';
 import '../../core/viewmodel/profile_viewmodel.dart';
 import 'profile/cards_view.dart';
 import 'profile/edit_profile_view.dart';
-import 'profile/notifications_view.dart';
 import 'profile/order_history_view.dart';
 import 'widgets/custom_text.dart';
 
@@ -79,13 +78,6 @@ class ProfileView extends StatelessWidget {
                         title: 'Cards',
                         onTapFn: () {
                           Get.to(CardsView());
-                        },
-                      ),
-                      CustomListTile(
-                        iconName: '5',
-                        title: 'Notifications',
-                        onTapFn: () {
-                          Get.to(NotificationsView());
                         },
                       ),
                       CustomListTile(
