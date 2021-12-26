@@ -147,7 +147,7 @@ class CheckoutView extends StatelessWidget {
                             if (_formKey.currentState!.validate()) {
                               _formKey.currentState!.save();
                               await controller.addCheckoutToFireStore();
-                              Get.dialog(
+                              /*Get.dialog(
                                 AlertDialog(
                                   content: SingleChildScrollView(
                                     child: Column(
@@ -179,7 +179,7 @@ class CheckoutView extends StatelessWidget {
                                   ),
                                 ),
                                 barrierDismissible: false,
-                              );
+                              );*/
                             }
                           },
                         ),
