@@ -127,6 +127,57 @@ class CheckoutView extends StatelessWidget {
                           height: 20.h,
                         ),
                         CustomTextFormField(
+                            title: 'Card Number',
+                            hintText: '1234 1234 1234 1234',
+                            validatorFn: (value) {
+                              if (value!.isEmpty || value.length < 16)
+                                return 'Please enter valid card number.';
+                            },
+                            onSavedFn: (value) {}),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                        CustomTextFormField(
+                            title: 'Card Holder Name',
+                            hintText: 'Alex',
+                            validatorFn: (value) {
+                              if (value!.isEmpty || value.length < 3)
+                                return 'Please enter valid card holder name.';
+                            },
+                            onSavedFn: (value) {}),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: CustomTextFormField(
+                                title: 'Expiry Date',
+                                hintText: '01/22',
+                                validatorFn: (value) {
+                                  if (value!.isEmpty || value.length < 4)
+                                    return 'Please enter valid expiry date.';
+                                },
+                                onSavedFn: (value) {},
+                              ),
+                            ),
+                            SizedBox(
+                              width: 36.w,
+                            ),
+                            Expanded(
+                              child: CustomTextFormField(
+                                title: 'CVV',
+                                hintText: '123',
+                                validatorFn: (value) {
+                                  if (value!.isEmpty || value.length < 3)
+                                    return 'Please enter valid cvv number.';
+                                },
+                                onSavedFn: (value) {},
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                        CustomTextFormField(
                           title: 'Phone Number',
                           hintText: '+60',
                           keyboardType: TextInputType.phone,
@@ -142,12 +193,12 @@ class CheckoutView extends StatelessWidget {
                           height: 38.h,
                         ),
                         CustomButton(
-                          'SUBMIT',
+                          'Pay',
                           () async {
                             if (_formKey.currentState!.validate()) {
                               _formKey.currentState!.save();
                               await controller.addCheckoutToFireStore();
-                              /*Get.dialog(
+                              Get.dialog(
                                 AlertDialog(
                                   content: SingleChildScrollView(
                                     child: Column(
@@ -179,7 +230,7 @@ class CheckoutView extends StatelessWidget {
                                   ),
                                 ),
                                 barrierDismissible: false,
-                              );*/
+                              );
                             }
                           },
                         ),
