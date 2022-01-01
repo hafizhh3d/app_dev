@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import '../../constants.dart';
+import '../../core/viewmodel/checkout_viewmodel.dart';
 import '../widgets/custom_text.dart';
 
 class CardsView extends StatelessWidget {
@@ -42,12 +44,77 @@ class CardsView extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Center(
-              child: CustomText(
-                text: 'You don\'t have cards.',
-                fontSize: 16,
-                color: Colors.black54,
-                alignment: Alignment.center,
+            child: GetBuilder<CheckoutViewModel>(
+              init: Get.find<CheckoutViewModel>(),
+              builder: (controller) => ListView.separated(
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(16.h),
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  CustomText(
+                                    text: controller.checkouts[index].date,
+                                    color: Colors.grey,
+                                  ),
+                                  CustomText(
+                                    text: 'Paid',
+                                    color: Colors.green.shade300,
+                                  ),
+                                ],
+                              ),
+                              Divider(
+                                thickness: 1,
+                                color: Colors.grey.shade200,
+                              ),
+                              CustomText(
+                                text: controller.checkouts[index].card,
+                              ),
+                              CustomText(
+                                text: controller.checkouts[index].name,
+                              ),
+                              CustomText(
+                                text: controller.checkouts[index].phone,
+                              ),
+                              Divider(
+                                thickness: 1,
+                                color: Colors.grey.shade200,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  CustomText(
+                                    text: 'Total Billed',
+                                    color: primaryColor,
+                                  ),
+                                  CustomText(
+                                    text:
+                                        '\RM${controller.checkouts[index].totalPrice}',
+                                    color: primaryColor,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+                separatorBuilder: (context, index) => Divider(
+                  thickness: 1,
+                  color: Colors.grey.shade200,
+                ),
+                itemCount: controller.checkouts.length,
               ),
             ),
           ),
