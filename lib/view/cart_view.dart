@@ -1,3 +1,4 @@
+import 'package:digati/view/checkout_payment_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -162,7 +163,7 @@ class CartView extends StatelessWidget {
                             child: CustomButton(
                               'CHECKOUT',
                               () {
-                                Get.to(CheckoutView());
+                                Get.to(CheckoutPaymentView());
                               },
                             ),
                           ),
