@@ -163,7 +163,7 @@ class CartView extends StatelessWidget {
                             child: CustomButton(
                               'CHECKOUT',
                               () {
-                                Get.to(CheckoutPaymentView());
+                                Get.to(CheckoutView());
                               },
                             ),
                           ),
