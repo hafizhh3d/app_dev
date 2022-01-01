@@ -133,7 +133,9 @@ class CheckoutView extends StatelessWidget {
                               if (value!.isEmpty || value.length < 16)
                                 return 'Please enter valid card number.';
                             },
-                            onSavedFn: (value) {}),
+                            onSavedFn: (value) {
+                              controller.card = value;
+                            }),
                         SizedBox(
                           height: 20.h,
                         ),
@@ -144,7 +146,9 @@ class CheckoutView extends StatelessWidget {
                               if (value!.isEmpty || value.length < 3)
                                 return 'Please enter valid card holder name.';
                             },
-                            onSavedFn: (value) {}),
+                            onSavedFn: (value) {
+                              controller.name = value;
+                            }),
                         Row(
                           children: [
                             Expanded(
@@ -155,7 +159,9 @@ class CheckoutView extends StatelessWidget {
                                   if (value!.isEmpty || value.length < 4)
                                     return 'Please enter valid expiry date.';
                                 },
-                                onSavedFn: (value) {},
+                                onSavedFn: (value) {
+                                  controller.expDate = value;
+                                },
                               ),
                             ),
                             SizedBox(
@@ -166,10 +172,12 @@ class CheckoutView extends StatelessWidget {
                                 title: 'CVV',
                                 hintText: '123',
                                 validatorFn: (value) {
-                                  if (value!.isEmpty || value.length < 3)
+                                  if (value!.isEmpty || value.length != 3)
                                     return 'Please enter valid cvv number.';
                                 },
-                                onSavedFn: (value) {},
+                                onSavedFn: (value) {
+                                  controller.cvv = value;
+                                },
                               ),
                             ),
                           ],
