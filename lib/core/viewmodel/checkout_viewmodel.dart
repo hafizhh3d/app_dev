@@ -7,7 +7,7 @@ import '../viewmodel/cart_viewmodel.dart';
 import '../../model/checkout_model.dart';
 
 class CheckoutViewModel extends GetxController {
-  String? street, city, state, country, phone;
+  String? street, city, state, country, card, name, expDate, cvv, phone;
 
   List<CheckoutModel> _checkouts = [];
 
@@ -42,6 +42,10 @@ class CheckoutViewModel extends GetxController {
       city: city!,
       state: state!,
       country: country!,
+      card: card!,
+      name: name!,
+      expDate: expDate!,
+      cvv: cvv!,
       phone: phone!,
       totalPrice: Get.find<CartViewModel>().totalPrice.toString(),
       date: DateFormat.yMMMd().add_jm().format(DateTime.now()),
