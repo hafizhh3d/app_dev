@@ -88,12 +88,12 @@ class CartView extends StatelessWidget {
                                           children: [
                                             GestureDetector(
                                               child: Icon(
-                                                Icons.add,
+                                                Icons.remove,
                                                 size: 20,
                                               ),
                                               onTap: () {
                                                 controller
-                                                    .increaseQuantity(index);
+                                                    .decreaseQuantity(index);
                                               },
                                             ),
                                             CustomText(
@@ -105,12 +105,12 @@ class CartView extends StatelessWidget {
                                             ),
                                             GestureDetector(
                                               child: Icon(
-                                                Icons.remove,
+                                                Icons.add,
                                                 size: 20,
                                               ),
                                               onTap: () {
                                                 controller
-                                                    .decreaseQuantity(index);
+                                                    .increaseQuantity(index);
                                               },
                                             ),
                                           ],

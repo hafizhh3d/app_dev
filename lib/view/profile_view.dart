@@ -75,7 +75,7 @@ class ProfileView extends StatelessWidget {
                       ),
                       CustomListTile(
                         iconName: '4',
-                        title: 'Cards',
+                        title: 'Payment Status',
                         onTapFn: () {
                           Get.to(CardsView());
                         },

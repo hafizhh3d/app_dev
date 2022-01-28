@@ -32,7 +32,7 @@ class CardsView extends StatelessWidget {
                     ),
                   ),
                   CustomText(
-                    text: 'Cards',
+                    text: 'Payment Status',
                     fontSize: 20,
                     alignment: Alignment.bottomCenter,
                   ),
